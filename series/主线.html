@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>主线 - 系列</title>
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; background: #faf8f5; }
+        .series-grid { display: flex; gap: 20px; flex-wrap: wrap; }
+        .series-card {
+            background: white; padding: 20px 30px; border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            text-decoration: none; color: #333; flex: 1 1 200px;
+            border: 1px solid #eee;
+        }
+        .series-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+        .nav-links { margin: 20px 0; }
+        .nav-links a { margin-right: 20px; color: #8B5CF6; text-decoration: none; }
+        .nav-links a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>主线</h1>
+    <p style="color: #666;">选择你想查看的内容：</p>
+
+    <div class="nav-links">
+        <a href="/">主页</a>
+        <a href="/wiki/角色百科.html">角色百科</a>
+    </div>
+
+    <h2>分类</h2>
+    <div class="series-grid">
+        <a href="/series/主线-人物小传.html" class="series-card">
+            <h3>人物小传</h3>
+            <p style="color: #999; font-size: 14px;">点击查看人物列表</p>
+        </a>
+        <a href="/series/主线-故事.html" class="series-card">
+            <h3>故事</h3>
+            <p style="color: #999; font-size: 14px;">点击查看故事列表</p>
+        </a>
+    </div>
+
+    <p style="margin-top: 40px; color: #999; font-size: 14px;"><a href="/">← 返回主页</a></p>
+</body>
+</html>
