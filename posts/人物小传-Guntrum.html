@@ -26,7 +26,7 @@
             background-attachment: fixed;
             background-repeat: no-repeat;
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;       /* 👈 整体居中 */
             align-items: center;
             padding: 30px 20px;
             position: relative;
@@ -48,8 +48,7 @@
             z-index: 1;
             max-width: 720px;
             width: 100%;
-            text-align: left;
-            margin-left: 8%;
+            text-align: left;              /* 👈 文字左对齐 */
             color: #2c1f2e;
             line-height: 1.9;
         }
@@ -62,25 +61,27 @@
             color: #2c1f2e;
             text-shadow: 0 0 40px rgba(150, 200, 230, 0.15), 0 4px 30px rgba(0,0,0,0.5);
             margin-bottom: 12px;
+            text-align: left;
         }
 
         .container .divider {
             border: none;
-            border-top: 1px solid rgba(180, 210, 230, 0.1);
+            border-top: 1px solid rgba(80, 60, 50, 0.12);
             margin: 0 0 20px;
         }
 
         .container p {
             font-size: 17px;
             color: #2c1f2e;
-            text-indent: 2em;
+            text-indent: 2em;              /* 👈 首行空两格 */
             margin-bottom: 12px;
+            text-align: left;
         }
 
         .nav-links {
             margin-top: 30px;
             padding-top: 16px;
-            border-top: 1px solid rgba(180, 210, 230, 0.06);
+            border-top: 1px solid rgba(80, 60, 50, 0.08);
         }
 
         .nav-links a {
@@ -89,22 +90,21 @@
             font-size: 13px;
             letter-spacing: 3px;
             text-transform: uppercase;
-            color: rgba(160, 195, 215, 0.35);
+            color: rgba(60, 40, 35, 0.45);
             text-decoration: none;
             transition: color 0.3s ease;
             margin-right: 20px;
         }
 
         .nav-links a:hover {
-            color: rgba(160, 195, 215, 0.7);
+            color: rgba(60, 40, 35, 0.8);
         }
 
         @media (max-width: 600px) {
             body { padding: 20px 16px; }
-            .container { margin-left: 0; }
             .container h1 { font-size: 28px; }
             .container p { font-size: 15px; }
-            body::before { background: rgba(0, 0, 0, 0.45); }
+            body::before { background: rgba(255, 248, 240, 0.45); }
         }
     </style>
 </head>
@@ -114,7 +114,7 @@
         <h1>Guntrum</h1>
         <hr class="divider">
 
-      <p>冈特拉姆一直是吸血鬼。吸血鬼大战的时候他的年龄放到人类里都算小的，也就十几岁，懵懵懂懂知道了一点东西，至少对死亡还是有实感的。总之他逃到森林里去被当时还住在森林里的希尔维娜捡回家，饿极了就抱着希尔维娜啃脖子。精灵血（或者一半的精灵血）是好喝的。希尔维娜没提出非议，不过被奥维利亚撞见了叫起来。希尔维娜想想这样也不是办法，一直吸精灵血（或人血）说不定会成为祸害。最后还是训练着让他喝动物血，卓有成效。</p>
+    <p>冈特拉姆一直是吸血鬼。吸血鬼大战的时候他的年龄放到人类里都算小的，也就十几岁，懵懵懂懂知道了一点东西，至少对死亡还是有实感的。总之他逃到森林里去被当时还住在森林里的希尔维娜捡回家，饿极了就抱着希尔维娜啃脖子。精灵血（或者一半的精灵血）是好喝的。希尔维娜没提出非议，不过被奥维利亚撞见了叫起来。希尔维娜想想这样也不是办法，一直吸精灵血（或人血）说不定会成为祸害。最后还是训练着让他喝动物血，卓有成效。</p>
     <p>他在希尔维娜俩人这里几乎是放养型，别的不说书看了不少。挺好的，希尔维娜说。过了十几二十年希尔维娜说我困了要睡觉，你要不去外面看看，吸血鬼都挺喜欢城市的。希尔维娜睡了之后他在森林里转悠了一些日子觉得实在没什么意思，于是就出去了。</p>
     <p>冈特拉姆的确挺喜欢城市的。他在城市里第一个真正说上话的是埃瑟斯，在妓院。他是被拽去的，感觉也挺新奇，上了床，被埃瑟斯留下了。他没什么事情做，对埃瑟斯也挺有好感，留下就留下吧。</p>
     <p>他在妓院交了不少朋友，大多数是同事，有年龄不算大的孩子也有四五十岁已经“年老色衰”的人。他能感觉到大家都蛮喜欢他，有什么事也和他说，时间久了他就发觉不对劲。好多人——几乎所有人，都在笑着对他说泪。然后有些朋友死掉了，死得很早，很瘦很苦地死掉了，在一个他认为还不该死掉的年龄。他是伤心的，流了泪，自己拿钱把他们葬起来。那是他的朋友们啊！</p>
