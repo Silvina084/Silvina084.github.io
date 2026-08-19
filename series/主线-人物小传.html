@@ -1,41 +1,303 @@
 <!DOCTYPE html>
 <html>
-<head><meta charset="utf-8"><title>主线 - 人物小传</title></head>
-<body style="font-family: sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; background: #faf8f5;">
-    <h1>主线 · 人物小传</h1>
-    <ul style="list-style: none; padding: 0;">
-      
-        <li style="padding: 12px 0; border-bottom: 1px solid #eee;">
-            <a href="/posts/人物小传-Guntrum.html" style="font-size: 18px; color: #8B5CF6; text-decoration: none;">Guntrum</a>
-            <p style="margin: 4px 0 0 0; color: #888;">吸血鬼</p>
-        </li>
-      
-        <li style="padding: 12px 0; border-bottom: 1px solid #eee;">
-            <a href="/posts/人物小传-Silvina.html" style="font-size: 18px; color: #8B5CF6; text-decoration: none;">Silvina</a>
-            <p style="margin: 4px 0 0 0; color: #888;">混血精灵</p>
-        </li>
-      
-        <li style="padding: 12px 0; border-bottom: 1px solid #eee;">
-            <a href="/posts/人物小传-Ethers.html" style="font-size: 18px; color: #8B5CF6; text-decoration: none;">Ethers</a>
-            <p style="margin: 4px 0 0 0; color: #888;">魅魔</p>
-        </li>
-      
-        <li style="padding: 12px 0; border-bottom: 1px solid #eee;">
-            <a href="/posts/人物小传-Richard(Dick).html" style="font-size: 18px; color: #8B5CF6; text-decoration: none;">Richard(Dick)</a>
-            <p style="margin: 4px 0 0 0; color: #888;">恶魔</p>
-        </li>
-      
-      <li style="padding: 12px 0; border-bottom: 1px solid #eee;">
-            <a href="/posts/人物小传-Asaach Hugh.html" style="font-size: 18px; color: #8B5CF6; text-decoration: none;">Asaach Hugh</a>
-            <p style="margin: 4px 0 0 0; color: #888;">龙</p>
-        </li>
-      
-      <li style="padding: 12px 0; border-bottom: 1px solid #eee;">
-            <a href="/posts/人物小传-Femgal Wenidio.html" style="font-size: 18px; color: #8B5CF6; text-decoration: none;">Femgal Wenidio</a>
-            <p style="margin: 4px 0 0 0; color: #888;">鹿精灵</p>
-        </li>
-      
-    </ul>
-    <p style="margin-top: 30px;"><a href="/series/主线.html">← 返回主线</a></p>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人物小传（部分）</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            min-height: 100vh;
+            font-family: 'Georgia', 'Times New Roman', serif;
+        }
+
+        body {
+            background-image: url('/ifbeijing.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 30px 20px;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.35);
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 820px;
+            width: 100%;
+            text-align: left;
+            margin-left: 4%;
+        }
+
+        .container h1 {
+            font-family: 'Cinzel', 'Georgia', serif;
+            font-weight: 900;
+            font-size: 38px;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: #d6e5f0;
+            text-shadow: 0 0 40px rgba(150, 200, 230, 0.15), 0 4px 30px rgba(0,0,0,0.5);
+            margin-bottom: 4px;
+        }
+
+        .container .sub-label {
+            font-family: 'Cinzel', 'Georgia', serif;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: rgba(180, 210, 230, 0.5);
+            text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+            margin-bottom: 20px;
+        }
+
+        .nav-links {
+            margin: 16px 0 24px;
+        }
+
+        .nav-links a {
+            font-family: 'Cinzel', 'Georgia', serif;
+            font-weight: 400;
+            font-size: 13px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgba(180, 210, 230, 0.5);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: rgba(180, 210, 230, 0.9);
+        }
+
+        .web-container {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin: 10px 0 20px;
+        }
+
+        .web-svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .web-svg .line {
+            stroke: rgba(180, 210, 230, 0.15);
+            stroke-width: 1.5;
+            stroke-dasharray: 6 4;
+        }
+
+        .web-svg .line-glow {
+            stroke: rgba(150, 200, 230, 0.05);
+            stroke-width: 8;
+        }
+
+        .node-group {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .node-group:hover {
+            filter: drop-shadow(0 0 20px rgba(150, 200, 230, 0.2));
+        }
+
+        .node-group:hover .node-bg {
+            fill: rgba(180, 210, 230, 0.12);
+            stroke: rgba(180, 210, 230, 0.4);
+        }
+
+        .node-bg {
+            fill: rgba(0, 0, 0, 0.3);
+            stroke: rgba(180, 210, 230, 0.12);
+            stroke-width: 1.5;
+            transition: all 0.3s ease;
+        }
+
+        .node-name {
+            font-family: 'Cinzel', 'Georgia', serif;
+            font-weight: 700;
+            font-size: 15px;
+            fill: rgba(210, 230, 245, 0.85);
+            text-anchor: middle;
+            letter-spacing: 2px;
+            dominant-baseline: central;
+        }
+
+        .node-race {
+            font-family: 'Georgia', serif;
+            font-size: 11px;
+            fill: rgba(180, 210, 230, 0.35);
+            text-anchor: middle;
+            letter-spacing: 1px;
+            dominant-baseline: central;
+        }
+
+        .relation-note {
+            margin-top: 20px;
+            font-family: 'Cinzel', 'Georgia', serif;
+            font-weight: 400;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgba(160, 195, 215, 0.25);
+            border-top: 1px solid rgba(180, 210, 230, 0.06);
+            padding-top: 16px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 16px;
+            font-family: 'Cinzel', 'Georgia', serif;
+            font-weight: 400;
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: rgba(160, 195, 215, 0.35);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: rgba(160, 195, 215, 0.7);
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 20px 16px; }
+            .container { margin-left: 0; }
+            .container h1 { font-size: 26px; letter-spacing: 4px; }
+            .web-container { max-width: 100%; }
+            .node-name { font-size: 13px; }
+            .node-race { font-size: 10px; }
+            body::before { background: rgba(0, 0, 0, 0.45); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>✦ 人物关系网</h1>
+        <p class="sub-label">主线 · 角色图谱</p>
+
+        <div class="nav-links">
+            <a href="/series/主线.html">← 返回主线</a>
+        </div>
+
+        <div class="web-container">
+            <svg class="web-svg" viewBox="0 0 700 480" xmlns="http://www.w3.org/2000/svg">
+
+                <!-- ============================================================ -->
+                <!-- 连线区域 -->
+                <!-- ============================================================ -->
+
+                <!-- Guntrum → Silvina -->
+                <line x1="140" y1="130" x2="350" y2="75" class="line" />
+                <line x1="140" y1="130" x2="350" y2="75" class="line-glow" />
+
+                <!-- Guntrum → Ethers -->
+                <line x1="140" y1="130" x2="140" y2="255" class="line" />
+                <line x1="140" y1="130" x2="140" y2="255" class="line-glow" />
+
+                <!-- Guntrum → Richard -->
+                <line x1="140" y1="130" x2="560" y2="130" class="line" />
+                <line x1="140" y1="130" x2="560" y2="130" class="line-glow" />
+
+                <!-- Guntrum → Asaach -->
+                <line x1="140" y1="130" x2="140" y2="375" class="line" />
+                <line x1="140" y1="130" x2="140" y2="375" class="line-glow" />
+
+                <!-- Guntrum → Femgal -->
+                <line x1="140" y1="130" x2="560" y2="375" class="line" />
+                <line x1="140" y1="130" x2="560" y2="375" class="line-glow" />
+
+                <!-- Ethers → Silvina -->
+                <line x1="140" y1="255" x2="350" y2="75" class="line" />
+                <line x1="140" y1="255" x2="350" y2="75" class="line-glow" />
+
+                <!-- Ethers → Richard -->
+                <line x1="140" y1="255" x2="560" y2="130" class="line" />
+                <line x1="140" y1="255" x2="560" y2="130" class="line-glow" />
+
+                <!-- Asaach → Femgal -->
+                <line x1="140" y1="375" x2="560" y2="375" class="line" />
+                <line x1="140" y1="375" x2="560" y2="375" class="line-glow" />
+
+                <!-- ============================================================ -->
+                <!-- 节点区域（已去除 emoji） -->
+                <!-- ============================================================ -->
+
+                <!-- ===== Guntrum（中心） ===== -->
+                <a href="/posts/人物小传-Guntrum.html" class="node-group">
+                    <rect x="80" y="100" width="120" height="60" rx="16" class="node-bg" />
+                    <text x="140" y="120" class="node-name">Guntrum</text>
+                    <text x="140" y="142" class="node-race">吸血鬼</text>
+                </a>
+
+                <!-- ===== Silvina（左上） ===== -->
+                <a href="/posts/人物小传-Silvina.html" class="node-group">
+                    <rect x="290" y="40" width="120" height="60" rx="16" class="node-bg" />
+                    <text x="350" y="60" class="node-name">Silvina</text>
+                    <text x="350" y="82" class="node-race">混血精灵</text>
+                </a>
+
+                <!-- ===== Ethers（左下） ===== -->
+                <a href="/posts/人物小传-Ethers.html" class="node-group">
+                    <rect x="80" y="225" width="120" height="60" rx="16" class="node-bg" />
+                    <text x="140" y="245" class="node-name">Ethers</text>
+                    <text x="140" y="267" class="node-race">魅魔</text>
+                </a>
+
+                <!-- ===== Richard(Dick)（右上） ===== -->
+                <a href="/posts/人物小传-Richard(Dick).html" class="node-group">
+                    <rect x="500" y="100" width="120" height="60" rx="16" class="node-bg" />
+                    <text x="560" y="120" class="node-name">Richard</text>
+                    <text x="560" y="142" class="node-race">恶魔</text>
+                </a>
+
+                <!-- ===== Asaach Hugh（左下二） ===== -->
+                <a href="/posts/人物小传-Asaach Hugh.html" class="node-group">
+                    <rect x="80" y="345" width="120" height="60" rx="16" class="node-bg" />
+                    <text x="140" y="365" class="node-name">Asaach</text>
+                    <text x="140" y="387" class="node-race">龙</text>
+                </a>
+
+                <!-- ===== Femgal Wenidio（右下） ===== -->
+                <a href="/posts/人物小传-Femgal Wenidio.html" class="node-group">
+                    <rect x="500" y="345" width="120" height="60" rx="16" class="node-bg" />
+                    <text x="560" y="365" class="node-name">Femgal</text>
+                    <text x="560" y="387" class="node-race">鹿精灵</text>
+                </a>
+
+            </svg>
+        </div>
+
+        <div class="relation-note">— 点击节点查看详细档案 · 虚线代表关联 —</div>
+        <a href="/" class="back-link">— MH.2026 —</a>
+    </div>
+
 </body>
 </html>
