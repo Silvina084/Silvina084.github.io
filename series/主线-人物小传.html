@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>主线 · 人物小传（部分）</title>
+    <title>主线 · 人物小传</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap');
 
@@ -46,7 +46,7 @@
         .container {
             position: relative;
             z-index: 1;
-            max-width: 920px;
+            max-width: 960px;
             width: 100%;
             text-align: left;
             margin-left: 4%;
@@ -96,7 +96,7 @@
         .web-container {
             position: relative;
             width: 100%;
-            max-width: 800px;
+            max-width: 850px;
             margin: 10px 0 20px;
         }
 
@@ -106,7 +106,6 @@
             display: block;
         }
 
-        /* ===== 连线 ===== */
         .web-svg .line {
             stroke: rgba(180, 210, 230, 0.3);
             stroke-width: 2.5;
@@ -118,7 +117,6 @@
             stroke-width: 12;
         }
 
-        /* ===== 节点 ===== */
         .node-group {
             cursor: pointer;
             transition: all 0.3s ease;
@@ -203,95 +201,94 @@
 
     <div class="container">
         <h1>角色小传（部分）</h1>
-        <p class="sub-label">好像只有长生种们</p>
 
         <div class="nav-links">
             <a href="/series/主线.html">← 返回主线</a>
         </div>
 
         <div class="web-container">
-            <svg class="web-svg" viewBox="0 0 800 540" xmlns="http://www.w3.org/2000/svg">
+            <svg class="web-svg" viewBox="0 0 860 540" xmlns="http://www.w3.org/2000/svg">
 
                 <!-- ============================================================ -->
                 <!-- 连线区域 -->
                 <!-- ============================================================ -->
 
                 <!-- Guntrum → Silvina -->
-                <line x1="160" y1="150" x2="400" y2="85" class="line" />
-                <line x1="160" y1="150" x2="400" y2="85" class="line-glow" />
+                <line x1="175" y1="150" x2="430" y2="85" class="line" />
+                <line x1="175" y1="150" x2="430" y2="85" class="line-glow" />
 
                 <!-- Guntrum → Ethers -->
-                <line x1="160" y1="150" x2="160" y2="290" class="line" />
-                <line x1="160" y1="150" x2="160" y2="290" class="line-glow" />
+                <line x1="175" y1="150" x2="175" y2="290" class="line" />
+                <line x1="175" y1="150" x2="175" y2="290" class="line-glow" />
 
                 <!-- Guntrum → Richard -->
-                <line x1="160" y1="150" x2="640" y2="150" class="line" />
-                <line x1="160" y1="150" x2="640" y2="150" class="line-glow" />
+                <line x1="175" y1="150" x2="685" y2="150" class="line" />
+                <line x1="175" y1="150" x2="685" y2="150" class="line-glow" />
 
-                <!-- Guntrum → Asaach -->
-                <line x1="160" y1="150" x2="160" y2="425" class="line" />
-                <line x1="160" y1="150" x2="160" y2="425" class="line-glow" />
+                <!-- Guntrum → Asaach（新位置 340, 385） -->
+                <line x1="175" y1="150" x2="340" y2="385" class="line" />
+                <line x1="175" y1="150" x2="340" y2="385" class="line-glow" />
 
                 <!-- Guntrum → Femgal -->
-                <line x1="160" y1="150" x2="640" y2="425" class="line" />
-                <line x1="160" y1="150" x2="640" y2="425" class="line-glow" />
+                <line x1="175" y1="150" x2="685" y2="425" class="line" />
+                <line x1="175" y1="150" x2="685" y2="425" class="line-glow" />
 
                 <!-- Ethers → Silvina -->
-                <line x1="160" y1="290" x2="400" y2="85" class="line" />
-                <line x1="160" y1="290" x2="400" y2="85" class="line-glow" />
+                <line x1="175" y1="290" x2="430" y2="85" class="line" />
+                <line x1="175" y1="290" x2="430" y2="85" class="line-glow" />
 
                 <!-- Ethers → Richard -->
-                <line x1="160" y1="290" x2="640" y2="150" class="line" />
-                <line x1="160" y1="290" x2="640" y2="150" class="line-glow" />
+                <line x1="175" y1="290" x2="685" y2="150" class="line" />
+                <line x1="175" y1="290" x2="685" y2="150" class="line-glow" />
 
-                <!-- Asaach → Femgal -->
-                <line x1="160" y1="425" x2="640" y2="425" class="line" />
-                <line x1="160" y1="425" x2="640" y2="425" class="line-glow" />
+                <!-- Asaach → Femgal（新位置 340, 385 → 685, 425） -->
+                <line x1="340" y1="385" x2="685" y2="425" class="line" />
+                <line x1="340" y1="385" x2="685" y2="425" class="line-glow" />
 
                 <!-- ============================================================ -->
                 <!-- 节点区域 -->
                 <!-- ============================================================ -->
 
-                <!-- ===== Guntrum（中心） ===== -->
+                <!-- ===== Guntrum ===== -->
                 <a href="/posts/人物小传-Guntrum.html" class="node-group">
-                    <rect x="90" y="110" width="140" height="80" rx="20" class="node-bg" />
-                    <text x="160" y="138" class="node-name">Guntrum</text>
-                    <text x="160" y="170" class="node-race">吸血鬼</text>
+                    <rect x="85" y="110" width="180" height="80" rx="20" class="node-bg" />
+                    <text x="175" y="138" class="node-name">Guntrum</text>
+                    <text x="175" y="170" class="node-race">吸血鬼</text>
                 </a>
 
-                <!-- ===== Silvina（左上） ===== -->
+                <!-- ===== Silvina ===== -->
                 <a href="/posts/人物小传-Silvina.html" class="node-group">
-                    <rect x="330" y="40" width="140" height="80" rx="20" class="node-bg" />
-                    <text x="400" y="68" class="node-name">Silvina</text>
-                    <text x="400" y="100" class="node-race">混血精灵</text>
+                    <rect x="340" y="40" width="180" height="80" rx="20" class="node-bg" />
+                    <text x="430" y="68" class="node-name">Silvina</text>
+                    <text x="430" y="100" class="node-race">混血精灵</text>
                 </a>
 
-                <!-- ===== Ethers（左下） ===== -->
+                <!-- ===== Ethers ===== -->
                 <a href="/posts/人物小传-Ethers.html" class="node-group">
-                    <rect x="90" y="250" width="140" height="80" rx="20" class="node-bg" />
-                    <text x="160" y="278" class="node-name">Ethers</text>
-                    <text x="160" y="310" class="node-race">魅魔</text>
+                    <rect x="85" y="250" width="180" height="80" rx="20" class="node-bg" />
+                    <text x="175" y="278" class="node-name">Ethers</text>
+                    <text x="175" y="310" class="node-race">魅魔</text>
                 </a>
 
-                <!-- ===== Richard(Dick)（右上） ===== -->
+                <!-- ===== Richard(Dick) ===== -->
                 <a href="/posts/人物小传-Richard(Dick).html" class="node-group">
-                    <rect x="570" y="110" width="140" height="80" rx="20" class="node-bg" />
-                    <text x="640" y="138" class="node-name">Richard(Dick)</text>
-                    <text x="640" y="170" class="node-race">恶魔</text>
+                    <rect x="595" y="110" width="180" height="80" rx="20" class="node-bg" />
+                    <text x="685" y="138" class="node-name">Richard(Dick)</text>
+                    <text x="685" y="170" class="node-race">恶魔</text>
                 </a>
 
-                <!-- ===== Asaach Hugh（左下二） ===== -->
+                <!-- ===== Asaach Hugh（往右移，x=340，在中间偏左） ===== -->
                 <a href="/posts/人物小传-Asaach Hugh.html" class="node-group">
-                    <rect x="90" y="385" width="140" height="80" rx="20" class="node-bg" />
-                    <text x="160" y="413" class="node-name">Asaach Hugh</text>
-                    <text x="160" y="445" class="node-race">龙</text>
+                    <rect x="250" y="345" width="180" height="80" rx="20" class="node-bg" />
+                    <text x="340" y="373" class="node-name">Asaach Hugh</text>
+                    <text x="340" y="405" class="node-race">龙</text>
                 </a>
 
-                <!-- ===== Femgal Wenidio（右下） ===== -->
+                <!-- ===== Femgal Wenidio ===== -->
                 <a href="/posts/人物小传-Femgal Wenidio.html" class="node-group">
-                    <rect x="570" y="385" width="140" height="80" rx="20" class="node-bg" />
-                    <text x="640" y="413" class="node-name">Femgal Wenidio</text>
-                    <text x="640" y="445" class="node-race">鹿精灵</text>
+                    <rect x="595" y="385" width="180" height="80" rx="20" class="node-bg" />
+                    <text x="685" y="413" class="node-name">Femgal Wenidio</text>
+                    <text x="685" y="445" class="node-race">鹿精灵</text>
                 </a>
 
             </svg>
