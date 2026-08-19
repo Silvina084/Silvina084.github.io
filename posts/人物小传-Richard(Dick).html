@@ -2,24 +2,107 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Dick - 人物小传</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard(Dick)</title>
     <style>
-        body {
-            font-family: sans-serif;
-            max-width: 700px;
-            margin: 40px auto;
-            padding: 0 20px;
-            background: #faf8f5;
-            line-height: 1.8;
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        p {
-            text-indent: 2em;   
+
+        html, body {
+            height: 100%;
+            min-height: 100vh;
+            font-family: 'Georgia', 'Times New Roman', serif;
+        }
+
+        body {
+            background-image: url('/zhiwen.jpg');    /* 👈 你的浅色背景图 */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;             /* 👈 靠左 */
+            align-items: flex-start;                 /* 👈 靠上，避免内容被挤压 */
+            padding: 40px 30px;
+            position: relative;
+        }
+
+        /* ===== 没有遮罩 ===== */
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 720px;
+            width: 100%;
+            text-align: left;
+            color: #2c1f2e;
+            line-height: 1.9;
+            padding: 10px 0;
+        }
+
+        .container h1 {
+            font-family: 'Cinzel', 'Georgia', serif;
+            font-weight: 900;
+            font-size: 38px;
+            letter-spacing: 4px;
+            color: #2c1f2e;
+            margin-bottom: 12px;
+            text-align: left;
+        }
+
+        .container .divider {
+            border: none;
+            border-top: 1px solid rgba(80, 60, 50, 0.12);
+            margin: 0 0 20px;
+        }
+
+        .container p {
+            font-size: 17px;
+            color: #2c1f2e;
+            text-indent: 2em;              /* 👈 首行空两格 */
+            margin-bottom: 12px;
+            text-align: left;
+        }
+
+        .nav-links {
+            margin-top: 30px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(80, 60, 50, 0.08);
+        }
+
+        .nav-links a {
+            font-family: 'Cinzel', 'Georgia', serif;
+            font-weight: 400;
+            font-size: 13px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgba(60, 40, 35, 0.45);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            margin-right: 20px;
+        }
+
+        .nav-links a:hover {
+            color: rgba(60, 40, 35, 0.8);
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 20px 16px; }
+            .container h1 { font-size: 28px; }
+            .container p { font-size: 15px; }
         }
     </style>
 </head>
 <body>
-    <h1>-Richard(Dick)</h1>
-<hr>
+
+    <div class="container">
+        <h1>Richard(Dick)</h1>
+        <hr class="divider">
 <p>迪克一直是恶魔。迪克是地狱生地狱长的恶魔，不知道是谁造他出来的。能力不大不小，地位不大不小，上司不好不坏，胸无大志但刚出生就混了个编制，大部分时间在人间混日子，隔段时间回地狱述职。坑蒙拐骗能力不算一流好也还算可以，因为在人间混的时间长看多了善恶冷暖所以为人处世不算差，甚至比一些人类的性子还好一些。毕竟是土生土长的原生恶魔不是人类转化来的，又没有被地狱的糟糕环境过分洗脑，所以并没有什么特别的恶在身上，除了本职工作不干其他坏事，坦然接受自己身份，也懒得觉醒，主要目标是混日子，可以算是混沌邪恶，要是出生在正常的人间说不定还能成为个好人。
 </p>
 <p>埃瑟斯刚堕天时出于好奇去看他，毕竟天使直接堕成恶魔的还是少有。听说了原因，觉得是不是有些过了，看到本人被折磨成这个样子更觉得有些过了。没胆量去阻止，大恶魔没一个他能打得过的，弄不好吃不了兜着走。捡了个人少的时间凑近去，埃瑟斯奄奄一息了感觉到他靠近还是一抖。蹲下来挑几个紧要的伤口用能力之内的奇迹治了，埃瑟斯眼睛睁开一点缝看了他一眼，挤出来一句支零破碎的“谢谢”。他摆摆手转身走了，暗自思忖这人能处但估计在地狱里不会太好受，第一次在地狱听到有人对他说谢谢的。
@@ -36,7 +119,12 @@
 </p>
 <p>至今依旧混日子。混日子万岁！
 </p>
-<hr>
-<p><a href="/series/主线-人物小传.html">← 返回人物列表</a> | <a href="/series/主线.html">主线</a> | <a href="/">主页</a></p>
+<div class="nav-links">
+            <a href="/series/主线-人物小传.html">← 返回关系网</a>
+            <a href="/series/主线.html">主线</a>
+            <a href="/">主页</a>
+        </div>
+    </div>
+
 </body>
 </html>
