@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主线 · 故事</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            min-height: 100vh;
+            font-family: 'Georgia', 'Times New Roman', serif;
+        }
+
+        body {
+            background-image: url('/zhuxiangushi.png');   /* 👈 你的深蓝色背景图 */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 20px;
+            position: relative;
+        }
+
+        /* ===== 深色遮罩（让文字更清晰） ===== */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.25);
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .container h1 {
+            font-family: 'Cinzel', 'Georgia', serif;
+            font-weight: 900;
+            font-size: 38px;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: #d6e5f0;
+            text-shadow: 0 0 40px rgba(150, 200, 230, 0.15), 0 4px 30px rgba(0,0,0,0.5);
+            margin-bottom: 4px;
+        }
+
+        .container .sub-label {
+            font-family: 'Cinzel', 'Georgia', serif;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: rgba(180, 210, 230, 0.5);
+            margin-bottom: 24px;
+        }
+
+        .nav-links {
+            margin: 16px 0 24px;
+        }
+
+        .nav-links a {
+            font-family: 'Cinzel', 'Georgia', serif;
+            font-weight: 400;
+            font-size: 13px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgba(180, 210, 230, 0.5);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            margin: 0 6px;
+        }
+
+        .nav-links a:hover {
+            color: rgba(180, 210, 230, 0.9);
+        }
+
+        .nav-links span {
+            color: rgba(180, 210, 230, 0.15);
+            margin: 0 4px;
+        }
+
+        .series-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+            margin-top: 10px;
+        }
+
+        .series-card {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            padding: 16px 28px;
+            border-radius: 30px;
+            border: 1px solid rgba(180, 210, 230, 0.15);
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(4px);
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        .series-card:hover {
+            background: rgba(180, 210, 230, 0.08);
+            border-color: rgba(180, 210, 230, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(100, 180, 220, 0.08);
+        }
+
+        .series-card h3 {
+            font-family: 'Cinzel', 'Georgia', serif;
+            font-weight: 400;
+            font-size: 18px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: rgba(200, 220, 235, 0.8);
+            margin: 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            font-family: 'Cinzel', 'Georgia', serif;
+            font-weight: 400;
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: rgba(160, 195, 215, 0.25);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: rgba(160, 195, 215, 0.6);
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 20px 16px; }
+            .container h1 { font-size: 28px; letter-spacing: 4px; }
+            .container .sub-label { font-size: 12px; letter-spacing: 4px; }
+            .series-card { max-width: 260px; padding: 14px 20px; }
+            .series-card h3 { font-size: 15px; letter-spacing: 3px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>主线 · 故事</h1>
+        <p class="sub-label">✦ 文章列表 ✦</p>
+
+        <div class="nav-links">
+            <a href="/">← 返回主页</a>
+            <span>|</span>
+            <a href="/series/主线.html">← 返回主线</a>
+        </div>
+
+        <div class="series-grid">
+            <a href="/posts/故事-海港.html" class="series-card">
+                <h3>海港</h3>
+            </a>
+            <a href="/posts/故事-如何虐待一只魅魔.html" class="series-card">
+                <h3>如何虐待一只魅魔</h3>
+            </a>
+            <a href="/series/主线-爱岗掉关系分析.html" class="series-card">
+                <h3>爱岗掉关系分析</h3>
+            </a>
+        </div>
+
+        <a href="/series/主线.html" class="back-link">— 返回主线 —</a>
+    </div>
+
+</body>
+</html>
