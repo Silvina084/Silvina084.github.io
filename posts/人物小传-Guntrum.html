@@ -2,25 +2,119 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Guntrum - 人物小传</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guntrum</title>
     <style>
-        body {
-            font-family: sans-serif;
-            max-width: 700px;
-            margin: 40px auto;
-            padding: 0 20px;
-            background: #faf8f5;
-            line-height: 1.8;
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        p {
-            text-indent: 2em;   
+
+        html, body {
+            height: 100%;
+            min-height: 100vh;
+            font-family: 'Georgia', 'Times New Roman', serif;
+        }
+
+        body {
+            background-image: url('/zhiwen.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 30px 20px;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 248, 240, 0.35);
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 720px;
+            width: 100%;
+            text-align: left;
+            margin-left: 8%;
+            color: #2c1f2e;
+            line-height: 1.9;
+        }
+
+        .container h1 {
+            font-family: 'Cinzel', 'Georgia', serif;
+            font-weight: 900;
+            font-size: 38px;
+            letter-spacing: 4px;
+            color: #2c1f2e;
+            text-shadow: 0 0 40px rgba(150, 200, 230, 0.15), 0 4px 30px rgba(0,0,0,0.5);
+            margin-bottom: 12px;
+        }
+
+        .container .divider {
+            border: none;
+            border-top: 1px solid rgba(180, 210, 230, 0.1);
+            margin: 0 0 20px;
+        }
+
+        .container p {
+            font-size: 17px;
+            color: #2c1f2e;
+            text-indent: 2em;
+            margin-bottom: 12px;
+        }
+
+        .nav-links {
+            margin-top: 30px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(180, 210, 230, 0.06);
+        }
+
+        .nav-links a {
+            font-family: 'Cinzel', 'Georgia', serif;
+            font-weight: 400;
+            font-size: 13px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgba(160, 195, 215, 0.35);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            margin-right: 20px;
+        }
+
+        .nav-links a:hover {
+            color: rgba(160, 195, 215, 0.7);
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 20px 16px; }
+            .container { margin-left: 0; }
+            .container h1 { font-size: 28px; }
+            .container p { font-size: 15px; }
+            body::before { background: rgba(0, 0, 0, 0.45); }
         }
     </style>
 </head>
 <body>
-    <h1>Guntrum</h1>
-    <hr>
-    <p>冈特拉姆一直是吸血鬼。吸血鬼大战的时候他的年龄放到人类里都算小的，也就十几岁，懵懵懂懂知道了一点东西，至少对死亡还是有实感的。总之他逃到森林里去被当时还住在森林里的希尔维娜捡回家，饿极了就抱着希尔维娜啃脖子。精灵血（或者一半的精灵血）是好喝的。希尔维娜没提出非议，不过被奥维利亚撞见了叫起来。希尔维娜想想这样也不是办法，一直吸精灵血（或人血）说不定会成为祸害。最后还是训练着让他喝动物血，卓有成效。</p>
+
+    <div class="container">
+        <h1>Guntrum</h1>
+        <hr class="divider">
+
+      <p>冈特拉姆一直是吸血鬼。吸血鬼大战的时候他的年龄放到人类里都算小的，也就十几岁，懵懵懂懂知道了一点东西，至少对死亡还是有实感的。总之他逃到森林里去被当时还住在森林里的希尔维娜捡回家，饿极了就抱着希尔维娜啃脖子。精灵血（或者一半的精灵血）是好喝的。希尔维娜没提出非议，不过被奥维利亚撞见了叫起来。希尔维娜想想这样也不是办法，一直吸精灵血（或人血）说不定会成为祸害。最后还是训练着让他喝动物血，卓有成效。</p>
     <p>他在希尔维娜俩人这里几乎是放养型，别的不说书看了不少。挺好的，希尔维娜说。过了十几二十年希尔维娜说我困了要睡觉，你要不去外面看看，吸血鬼都挺喜欢城市的。希尔维娜睡了之后他在森林里转悠了一些日子觉得实在没什么意思，于是就出去了。</p>
     <p>冈特拉姆的确挺喜欢城市的。他在城市里第一个真正说上话的是埃瑟斯，在妓院。他是被拽去的，感觉也挺新奇，上了床，被埃瑟斯留下了。他没什么事情做，对埃瑟斯也挺有好感，留下就留下吧。</p>
     <p>他在妓院交了不少朋友，大多数是同事，有年龄不算大的孩子也有四五十岁已经“年老色衰”的人。他能感觉到大家都蛮喜欢他，有什么事也和他说，时间久了他就发觉不对劲。好多人——几乎所有人，都在笑着对他说泪。然后有些朋友死掉了，死得很早，很瘦很苦地死掉了，在一个他认为还不该死掉的年龄。他是伤心的，流了泪，自己拿钱把他们葬起来。那是他的朋友们啊！</p>
@@ -51,7 +145,13 @@
     <p>再后来他干脆让上层知道了这件事。这样好操作，而且他终于可以合法得到人血了。上层不敢拿他们怎么样，他手里有几个好大的公司。</p>
     <p>他依旧偶尔去找埃瑟斯，埃瑟斯也还那样。埃瑟斯一直那样。</p>
     <p>2000年1月1日那天零点他还在公司加班。其他人几乎走光了。他孤零零的，坐在那，突然听到窗外烟花炸响。他抬起头。新时代到来了。</p>
-    <hr>
-    <p style="text-indent: 0;"><a href="/series/主线-人物小传.html">← 返回人物列表</a> | <a href="/series/主线.html">主线</a> | <a href="/">主页</a></p>
+
+        <div class="nav-links">
+            <a href="/series/主线-人物小传.html">← 返回关系网</a>
+            <a href="/series/主线.html">主线</a>
+            <a href="/">主页</a>
+        </div>
+    </div>
+
 </body>
 </html>
