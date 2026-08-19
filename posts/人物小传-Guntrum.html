@@ -20,37 +20,29 @@
         }
 
         body {
-            background-image: url('/zhiwen.jpg');
+            background-image: url('/zhiwen.jpg');    /* 👈 你的浅色背景图 */
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             background-repeat: no-repeat;
             display: flex;
-            justify-content: center;       /* 👈 整体居中 */
-            align-items: center;
-            padding: 30px 20px;
+            justify-content: flex-start;             /* 👈 靠左 */
+            align-items: flex-start;                 /* 👈 靠上，避免内容被挤压 */
+            padding: 40px 30px;
             position: relative;
         }
 
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 248, 240, 0.35);
-            z-index: 0;
-        }
+        /* ===== 没有遮罩 ===== */
 
         .container {
             position: relative;
             z-index: 1;
             max-width: 720px;
             width: 100%;
-            text-align: left;              /* 👈 文字左对齐 */
+            text-align: left;
             color: #2c1f2e;
             line-height: 1.9;
+            padding: 10px 0;
         }
 
         .container h1 {
@@ -59,7 +51,6 @@
             font-size: 38px;
             letter-spacing: 4px;
             color: #2c1f2e;
-            text-shadow: 0 0 40px rgba(150, 200, 230, 0.15), 0 4px 30px rgba(0,0,0,0.5);
             margin-bottom: 12px;
             text-align: left;
         }
@@ -104,7 +95,6 @@
             body { padding: 20px 16px; }
             .container h1 { font-size: 28px; }
             .container p { font-size: 15px; }
-            body::before { background: rgba(255, 248, 240, 0.45); }
         }
     </style>
 </head>
