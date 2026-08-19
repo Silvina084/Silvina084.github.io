@@ -20,17 +20,19 @@
         }
 
         body {
-            background-image: url('/haigang.jpg');   /* 👈 你的浅蓝灰色背景图 */
+            background-image: url('/haigang.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             background-repeat: no-repeat;
             display: flex;
             justify-content: center;
-            align-items: center;
-            padding: 30px 20px;
+            align-items: flex-start;          /* 👈 靠上，确保标题可见 */
+            padding: 40px 20px;
             position: relative;
         }
+
+        /* ===== 没有背景遮罩 ===== */
 
         .container {
             position: relative;
@@ -40,6 +42,7 @@
             text-align: left;
             color: #2c1f2e;
             line-height: 1.9;
+            padding-top: 10px;
         }
 
         .container h1 {
@@ -109,7 +112,7 @@
 
     <div class="container">
         <h1>海港</h1>
-        <div class="story-meta">— 海因里希/冈特拉姆 —</div>
+        <div class="story-meta">— 主线 · 短篇 —</div>
 
         <hr class="divider">
 
